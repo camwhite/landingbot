@@ -1,0 +1,20 @@
+{
+  "name": "landingbot",
+  "version": "1.0.0",
+  "description": "A bot to help drive engagement for any landing page.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ai",
+    "bot",
+    "engagement",
+    "slack"
+  ],
+  "author": "camwhite",
+  "license": "MIT",
+  "dependencies": {
+    "node-slack": "0.0.7"
+  }
+}

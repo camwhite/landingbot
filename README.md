@@ -2,12 +2,6 @@
 
 `npm i landingbot -S`
 
-# Requirements
-
-*If used on the server-side a signaling channel is necessary, such as [socket.io](https://socket.io)*
-
-- node >= v6
-
 # Usage
 
 Landingbot can be used with no additional options, like below.

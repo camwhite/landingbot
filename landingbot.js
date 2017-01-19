@@ -1,30 +1,28 @@
 'use strict';
 
 const Slack = require('node-slack');
+const defaultOpts = {
+  name: 'landingbot',
+  page: 'my site',
+  owner: 'the owner'
+};
+const defaultExpressions = [
+  {
+    regex: /Who\ are\ you/ig,
+    question: 'Who are you?',
+    response: `I\'m ${this.opts.name} brought to you by [Cam White](https://camwhite.site).`
+  },
+  {
+    regex: /What\ do\ you\ do/ig,
+    question: 'What do you do?',
+    response: `I help drive engagement with visitors!`
+  }
+];
 
-class Bot {
+class Landingbot {
 
   constructor(opts, expressions) {
-    let defaultOpts = {
-      name: 'landingbot',
-      page: 'my site',
-      owner: 'the owner'
-    };
-
     this.opts = opts || defaultOpts;
-
-    let defaultExpressions = [
-      {
-        regex: /Who\ are\ you/ig,
-        question: 'Who are you?',
-        response: `I\'m ${this.opts.name} brought to you by [Cam White](https://camwhite.site).`
-      },
-      {
-        regex: /What\ do\ you\ do/ig,
-        question: 'What do you do?',
-        response: `I help drive engagement with visitors!`
-      }
-    ];
 
     if(expressions) {
       this.expressions = [...defaultExpressions, ...expressions];
@@ -104,4 +102,4 @@ class Bot {
 
 }
 
-module.exports = Bot;
+module.exports = Landingbot;

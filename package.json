@@ -1,8 +1,8 @@
 {
   "name": "landingbot",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A bot to help drive engagement for any landing page.",
-  "main": "bot.js",
+  "main": "landingbot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,4 +1,4 @@
-# Installion
+# Installation
 
 `npm i landingbot -S`
 

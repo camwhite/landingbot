@@ -13,15 +13,15 @@
 Landingbot can be used with no additional options, like below.
 
 ```
-const Bot = require('landingbot');
-let bot = new Bot();
+const Landingbot = require('landingbot');
+let landingbot = new Landingbot();
 ```
 
 Or with an options object like this
 
 ```
-const Bot = require('landingbot');
-let bot = new Bot({
+const Landingbot = require('landingbot');
+let landingbot = new Landingbot({
   name: 'Cambot',
   page: 'Cam\'s site',
   owner: 'Cam'
@@ -37,7 +37,7 @@ Additionally a `slack_hook` can be specified in the options, to allow for realti
 Well you can do that too! The second arguement of the constructor accepts an array of objects. You can do that like this...
 
 ```
-const Bot = require('landingbot');
+const Landingbot = require('landingbot');
 const customExpressions = [
   {
     regex: /Is\ this\ some\ question/ig,
@@ -45,7 +45,7 @@ const customExpressions = [
     response: 'Landingbot's reply to the question'
   }
 ];
-let bot = new Bot({
+let landingbot = new Landingbot({
   name: 'Cambot',
   page: 'Cam\'s site',
   owner: 'Cam'

@@ -2,13 +2,13 @@
 
 const Slack = require('node-slack');
 const defaultOpts = require('./config/options');
-const defaultExpressions = require('./config/expressions');
 
 class Landingbot {
 
   constructor(opts, expressions) {
     this.opts = opts || defaultOpts;
 
+    const defaultExpressions = require('./config/expressions')(this.opts);
     if(expressions) {
       this.expressions = [...defaultExpressions, ...expressions];
     }

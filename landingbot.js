@@ -1,23 +1,8 @@
 'use strict';
 
 const Slack = require('node-slack');
-const defaultOpts = {
-  name: 'landingbot',
-  page: 'my site',
-  owner: 'the owner'
-};
-const defaultExpressions = [
-  {
-    regex: /Who\ are\ you/ig,
-    question: 'Who are you?',
-    response: `I\'m ${this.opts.name} brought to you by [Cam White](https://camwhite.site).`
-  },
-  {
-    regex: /What\ do\ you\ do/ig,
-    question: 'What do you do?',
-    response: `I help drive engagement with visitors!`
-  }
-];
+const defaultOpts = require('./config/options');
+const defaultExpressions = require('./config/expressions');
 
 class Landingbot {
 
@@ -86,14 +71,13 @@ class Landingbot {
               are directed to ${this.opts.owner}. Goodbye, ${this.opts.name} signing off.`;
     }
 
-    let canPing = `Feel free to type \`ping\` to notify ${this.opts.owner}.`
-
+    let ping = `Feel free to type \`ping\` to notify ${this.opts.owner}.`
     for(let exp of this.expressions) {
       if(exp.regex.test(this.message)) {
         return this.response = exp.response;
       }
       else {
-        this.response = `Sorry ${this.currentUser} I couldn\'t understand that. ${this.slack ? canPing : ''}`;
+        this.response = `Sorry ${this.currentUser} I couldn\'t understand that. ${this.slack ? ping : ''}`;
       }
     }
 

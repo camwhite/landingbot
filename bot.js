@@ -10,6 +10,7 @@ class Bot {
       page: 'my site',
       owner: 'the owner'
     };
+
     this.opts = opts || defaultOpts;
 
     let defaultExpressions = [
@@ -73,6 +74,7 @@ class Bot {
   _generateResponse() {
     if(this.messages.length <= 1) {
       this.currentUser = this.message;
+
       return `Thanks ${this.currentUser} I really appreciate you stoppping by!
               Presently I can understand the following questions..
               ${this.expressions.map(exp => exp.question)}`.replace(/\,/g, ' ');

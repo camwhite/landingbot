@@ -31,7 +31,7 @@ Additionally a `slack_hook` can be specified in the options, to allow for realti
 
 *Note: This is only step one of two to enable back and forth communication from Slack to landingbot and vice versa*
 
-#### Want to use Custom Expressions?
+### Want to use Custom Expressions?
 
 Well you can do that too! The second arguement of the constructor accepts an array of objects formatted as such...
 

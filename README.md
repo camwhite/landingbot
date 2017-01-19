@@ -1,3 +1,7 @@
+[![npm version](https://badge.fury.io/js/landingbot.svg)](https://badge.fury.io/js/landingbot)
+[![Dependency Status](https://www.versioneye.com/user/projects/5880d92f452b830032bb7011/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5880d92f452b830032bb7011)
+[![Code Climate](https://codeclimate.com/github/camwhite/landingbot/badges/gpa.svg)](https://codeclimate.com/github/camwhite/landingbot)
+
 # Installation
 
 `npm i landingbot -S`

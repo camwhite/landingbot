@@ -2,6 +2,10 @@
 [![Dependency Status](https://www.versioneye.com/user/projects/5880d92f452b830032bb7011/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5880d92f452b830032bb7011)
 [![Code Climate](https://codeclimate.com/github/camwhite/landingbot/badges/gpa.svg)](https://codeclimate.com/github/camwhite/landingbot)
 
+# Demo
+
+Visit my personal [landing page](https://camwhite.site) to take it for a test drive
+
 # Installation
 
 `npm i landingbot -S`
@@ -15,7 +19,7 @@ const Landingbot = require('landingbot');
 let landingbot = new Landingbot();
 ```
 
-Or with an options object like this
+However, that does not provide much functionality. You probably want to supply options like this..
 
 ```
 const Landingbot = require('landingbot');
@@ -61,7 +65,7 @@ one for every new message.
 Remember how I mentioned there were two steps to enable back and forth comms within Slack? 
 Well in this configuration the next step is as follows.. 
 First create an [outgoing webhook](https://slack.com/services/new/outgoing-webhook) with Slack. 
-Then you need your server to handle a post to whatever hook url you specified, maybe something like this...
+Then you need your server to handle a post to whatever hook url you specified.
 
 > Take a look [here](https://github.com/camwhite/landingbot/blob/master/examples/app.js) for a simple example.
 

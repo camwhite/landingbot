@@ -74,7 +74,8 @@ class Landingbot {
     let ping = `Feel free to type \`ping\` to notify ${this.opts.owner}.`
     for(let exp of this.expressions) {
       if(exp.regex.test(this.message)) {
-        return this.response = exp.response;
+        this.response = exp.response;
+        return this.response;
       }
       else {
         this.response = `Sorry ${this.currentUser} I couldn\'t understand that. ${this.slack ? ping : ''}`;

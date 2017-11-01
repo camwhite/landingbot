@@ -1,10 +1,3 @@
-[![npm version](https://badge.fury.io/js/landingbot.svg)](https://badge.fury.io/js/landingbot)
-[![Dependency Status](https://www.versioneye.com/user/projects/5880d92f452b830032bb7011/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5880d92f452b830032bb7011)
-[![Code Climate](https://codeclimate.com/github/camwhite/landingbot/badges/gpa.svg)](https://codeclimate.com/github/camwhite/landingbot)
-
-# Demo
-
-Visit my personal [landing page](https://camwhite.site) to take it for a test drive
 
 # Installation
 
@@ -16,14 +9,14 @@ Landingbot can be used with no additional options, like below.
 
 ```
 const Landingbot = require('landingbot');
-let landingbot = new Landingbot();
+const landingbot = new Landingbot();
 ```
 
 However, that does not provide much functionality. You probably want to supply options like this..
 
 ```
 const Landingbot = require('landingbot');
-let landingbot = new Landingbot({
+const landingbot = new Landingbot({
   name: 'Cambot',
   page: 'Cam\'s site',
   owner: 'Cam'
@@ -47,7 +40,7 @@ const customExpressions = [
     response: 'Landingbot's reply to the question'
   }
 ];
-let landingbot = new Landingbot({
+const landingbot = new Landingbot({
   name: 'Cambot',
   page: 'Cam\'s site',
   owner: 'Cam'
